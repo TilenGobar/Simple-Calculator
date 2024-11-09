@@ -1,7 +1,11 @@
+html {
+  font-size: 62.5%;
+}
+
 .div {
   background-color: #D3D3D3;
-  width: 30%;
-  height: 82vh;
+  width: 500px;
+  height: 800px;
   text-align: center;
   border-radius: 3rem;
 }
@@ -21,6 +25,39 @@
 
 .buttons {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 
+.row {
+  display: flex;
+  padding: 10px 0;
+  justify-content: space-evenly;
+}
+
+.calculato-button {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 100rem;
+  font-size: 5rem;
+  border: none;
+  background-color: #A9A9A9;
+}
+
+.calculato-button:active {
+  transform: scale(.95);
+}
+
+.color2 {
+  background-color: orange;
+}
+
+.color3 {
+  background-color: #404040;
+  color: white;
+}
+
+.color4 {
+  background-color: red;
+  color: white;
+}

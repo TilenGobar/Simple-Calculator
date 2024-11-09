@@ -1,86 +1,43 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" href="css/kalkulator.css">
-    <link rel="stylesheet" href="css/text-size.css">
-    <link rel="stylesheet" href="css/col-1.css">
-    <link rel="stylesheet" href="css/col-2.css">
-    <link rel="stylesheet" href="css/col-3.css">
-    <link rel="stylesheet" href="css/col-4.css">
+  <link rel="stylesheet" href="css/kalkulator.css" />
 </head>
 <body>
-<div class="div">
-  <p class="thing">CALCULATOR</p>
-  <input type="text" class="result" id="input-number">
-  <div class="buttons">
-    <div class="row-1">
-      <button  class="col-1-of-5_1" id="ac-btn" onclick="clearResult()">
-        AC
-      </button>
-      <button class="col-2-of-5_1" id="7-btn" onclick="seven(7)" >
-        7
-      </button>
-      <button class="col-3-of-5_1" id="4-btn" onclick="four(4)">
-        4
-      </button>
-      <button class="col-4-of-5_1" id="1-btn" onclick="one(1)">
-        1
-      </button>
-      <button class="col-5-of-5_1" id="dot-btn" onclick="dot()">
-        .
-    </button>
+  <div class="div">
+    <span class="thing">CALCULATOR</span>
+    <input type="text" class="result" id="input-number" />
+    <div class="buttons">
+      <div class="row">
+        <button class="calculato-button color4" onclick="clearResult()">AC</button>
+        <button class="calculato-button color3" onclick="clearOne()">C</button>
+        <button class="calculato-button color3" onclick="percent('%')">&#x25;</button>
+        <button class="calculato-button color2" onclick="addOperator('/')">&#xf7;</button>
+      </div>
+      <div class="row">
+        <button class="calculato-button" onclick="handleButtonClick(7)">7</button>
+        <button class="calculato-button" onclick="handleButtonClick(8)">8</button>
+        <button class="calculato-button" onclick="handleButtonClick(9)">9</button>
+        <button class="calculato-button color2" onclick="addOperator('*')">&#xd7;</button>
+      </div>
+      <div class="row">
+        <button class="calculato-button" onclick="handleButtonClick(4)">4</button>
+        <button class="calculato-button" onclick="handleButtonClick(5)">5</button>
+        <button class="calculato-button" onclick="handleButtonClick(6)">6</button>
+        <button class="calculato-button color2" onclick="addOperator('-')">&#x2212;</button>
+      </div>
+      <div class="row">
+        <button class="calculato-button" onclick="handleButtonClick(1)">1</button>
+        <button class="calculato-button" onclick="handleButtonClick(2)">2</button>
+        <button class="calculato-button" onclick="handleButtonClick(3)">3</button>
+        <button class="calculato-button color2" onclick="addOperator('+')">&#x2b;</button>
+    </div>
+    <div class="row">
+        <button class="calculato-button" onclick="handleButtonClick('.')">.</button>
+        <button class="calculato-button" onclick="handleButtonClick(0)">0</button>
+        <button class="calculato-button" onclick="handleButtonClick(',')">,</button>
+        <button class="calculato-button color2" onclick="equal()">&#x3d;</button>
+      </div>
+    </div>
   </div>
-  <div class="row-2">
-    <button class="col-1-of-5_2" id="c-btn" onclick="clearOne()">
-      C
-   </button>
-   <button class="col-2-of-5_2" id="8-btn" onclick="eight(8)">
-      8
-   </button>
-   <button class="col-3-of-5_2" id="5-btn" onclick="five(5)">
-      5
-   </button>
-   <button class="col-4-of-5_2" id="2-btn" onclick="two(2)">
-      2
-  </button>
-  <button class="col-5-of-5_2" id="0-btn" onclick="zero(0)">
-      0
-  </button>
-</div>
-<div class="row-3">
-  <button class="col-1-of-5_3" id="%-btn" onclick="percent('%')">
-    &#x25;
-  </button>
-  <button class="col-2-of-5_3" id="9-btn" onclick="nine(9)">
-    9
-  </button>
-  <button class="col-3-of-5_3" id="6-btn" onclick="six(6)">
-    6
-  </button>
-  <button class="col-4-of-5_3" id="3-btn" onclick="three(3)">
-    3
-  </button>
-  <button class="col-5-of-5_3" id="comma-btn" onclick="comma()">
-    ,
-</button>
-</div>
-<div class="row-4">
-  <button class="col-1-of-5_4" id="divide-btn" onclick="addOperator('/')">
-    &#xf7;
-  </button>
-  <button class="col-2-of-5_4" id="multiply-btn" onclick="addOperator('*')">
-    &#xd7;
-  </button>
-  <button class="col-3-of-5_4" id="sub-btn" onclick="addOperator('-')">
-    &#x2212;
-  </button>
-  <button class="col-4-of-5_4"  id="add-btn" onclick="addOperator('+')">
-    &#x2b;
-  </button>
-  <button class="col-5-of-5_4" id="equal-btn" onclick="equal()">
-    &#x3d;
-</div>
-  </div>
-  
-</div>
 </body>
 <script src="javascript/kalkulator.js"></script>
